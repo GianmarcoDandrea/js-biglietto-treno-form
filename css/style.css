@@ -1,6 +1,6 @@
 /**************** ROOT ************/
 :root {
-    --primary-color:#b91450;
+    --primary-color: #4356ff;
 }
 
 
@@ -10,9 +10,13 @@
     align-items: center;
 }
 
+.container-fluid {
+    height: 90%;
+}
+
 /******** BACKGROUND ********/
 .bgimage {
-    background-image: url(../img/base-background.jpg);
+    background-image: url(../img/background-image.jpg);
     background-size: cover;
 }
 
@@ -54,8 +58,29 @@ input[type=text]:focus-visible {
     border: 1px solid var(--primary-color);
 }
 
+#ageRange:focus-visible {
+    outline: none;
+}
+
 /************** BOTTOM ***********/
 
 .hidden {
     display: none;
+}
+
+.ticket-title {
+    color: var(--primary-color);
+}
+
+.ticket-section {
+    background-color: #ffffffb4;
+}
+
+.ticket-name {
+    background-color: #717bd6;
+}
+
+.bdr {
+    border-bottom: 1px solid #717bd6;
+    border-top: 1px solid #717bd6;
 }

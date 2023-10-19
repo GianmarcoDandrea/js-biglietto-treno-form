@@ -13,21 +13,25 @@
 </head>
 
 <body class=" d-flex flex-center w-100 vh-100 bgimage">
-    <div class="container-fluid w-75 h-75">
-        <h2 class="main-title fw-bold fs-1 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-        <div class="upper w-10 pt-3 pb-2 d-flex flex-center flex-wrap rounded-2">
+
+    <div class="container-fluid w-75 py-5">
+
+        <h2 class="main-title fw-bold fs-1 text-center mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+
+        <!-- UPPER SECTION -->
+        <div class="upper w-10 px-4 py-3 d-flex flex-center flex-wrap rounded-4">
             <section class="module w-100 d-flex flex-center">
 
                 <div class="name-section d-flex flex-column w-50 px-5">
                     <label class="mb-2 text-center" for="name">Nome e Cognome</label>
                     <input type="text" id="name" class="rounded-3 px-2 py-1">
                 </div>
-                
+
                 <div class="distance-section d-flex flex-column w-25 px-4">
                     <label class="mb-2 text-center" for="distance">Km da percorrere</label>
                     <input type="text" id="distance" class="rounded-3 px-2 py-1">
                 </div>
-                
+
                 <div class="ageRange-section d-flex flex-column w-25 px-4">
                     <label class="mb-2 text-center" for="ageRange">Fascia d'età</label>
                     <select id="ageRange" class="rounded-3 py-1">
@@ -37,22 +41,78 @@
                         <option value="elder">Over 65</option>
                     </select>
                 </div>
-                
-            </section>    
-            
+
+            </section>
+
             <div class="button mt-5 mb-3">
                 <button id="send" class="btn">Invia</button>
                 <button id="delete" class="btn">Cancella</button>
             </div>
         </div>
-    
-        <div class="bottom w-10 h-50 d-flex flex-center">
-            <section id="ticket" class="hidden">
-                <h2>Il prezzo del tuo biglietto è:</h2>
-                <p id="price"></p>
+
+        <!-- BOTTOM SECTION -->
+        <div class="bottom w-100 mt-3">
+
+            <section id="ticket" class=" hidden w-100 mt-2">
+                <h2 class="ticket-title fw-bold fs-2 text-center">IL TUO BIGLIETTO</h2>
+
+                <div class="ticket-section p-3 rounded-4">
+                    <h4 class="details-title fw-bold">DETTAGLIO PASSEGGERO</h4>
+                    <div class="ticket-details d-flex">
+                        <div class="ticket-name p-2 w-25">
+                            <h4 class="mini-title fw-bold">
+                                NOME PASSEGGERO
+                            </h4>
+
+                            <h5 id="passenger-name" class="mb-5"></h5>
+                        </div>
+                        <div class="ticket-data bdr w-75 d-flex justify-content-between ps-2">
+
+                            <div class="offer d-flex flex-column w-25 justify-content-between">
+                                <h5 class="mini-title fw-bold">
+                                    Offerta
+                                </h5>
+
+                                <p class="fs-5">
+                                    Biglietto Standard
+                                </p>
+                            </div>
+
+                            <div class="wagon d-flex flex-column w-25 justify-content-between">
+                                <h5 class="mini-title fw-bold">
+                                    Carrozza
+                                </h5>
+
+                                <p class="fs-5">
+                                    5
+                                </p>
+                            </div>
+
+                            <div class="ticket-code d-flex flex-column w-25 justify-content-between">
+                                <h5 class="mini-title fw-bold">
+                                    Codice CP
+                                </h5>
+
+                                <p id="codeCP" class="fs-5">
+
+                                </p>
+                            </div>
+
+                            <div class="ticket-price d-flex flex-column w-25 justify-content-between">
+                                <h5 class="mini-title fw-bolder">
+                                    Costo Biglietto
+                                </h5>
+
+                                <p id="price" class="fs-5"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </section>
-    
+
         </div>
+
     </div>
 
 

@@ -3,11 +3,14 @@ const userNameElem = document.getElementById("name");
 const userKmElem = document.getElementById("distance");
 const userAgeRangeElem = document.getElementById("ageRange")
 const sendBtn = document.getElementById("send");
-const deleteBtn = document.getElementById("delete")
+const deleteBtn = document.getElementById("delete");
 const ticketSection = document.getElementById("ticket");
+
+
 
 // Premo il tasto invia
 sendBtn.addEventListener("click", function () {
+
   // RACCOLTA DATI UNPUT
   const userName = userNameElem.value;
   const userKm = parseFloat(userKmElem.value);
@@ -28,20 +31,29 @@ sendBtn.addEventListener("click", function () {
   } else {
     totalPrice = normalPrice;
   }
-  console.log(totalPrice)
+  console.log(totalPrice);
+
+  // preparazioni constati per output
   const message = totalPrice.toFixed(2);
-  console.log(message)
-  document.getElementById("price").innerHTML = message + "€";
+  console.log(message);
+
+  const codeCPrandom = Math.floor(Math.random() * 99999) + 1;
+
 
   // OUTPUT
+
   ticketSection.classList.remove("hidden");
+  document.getElementById("price").innerHTML = message + "€";
+  document.getElementById("passenger-name").innerHTML = userName;
+  document.getElementById("codeCP").innerHTML = codeCPrandom;
+
 
 });
 
 // Premo il tasto cancella
 deleteBtn.addEventListener("click", function () {
-  userName = "";
-  userKm = "";
-  userAgeRange = "";
-  ticketSection.classList.add("hidden")
+  userNameElem.value = "";
+  userKmElem.value = "";
+  userAgeRangeElem.value = "";
+  ticketSection.classList.add("hidden");
 });
