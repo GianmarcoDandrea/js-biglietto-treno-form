@@ -38,7 +38,7 @@ sendBtn.addEventListener("click", function () {
   console.log(message);
 
   const codeCPrandom = Math.floor(Math.random() * 99999) + 1;
-
+  const wagonNumber = Math.floor(Math.random() * 7) + 5;
 
   // OUTPUT
 
@@ -46,7 +46,7 @@ sendBtn.addEventListener("click", function () {
   document.getElementById("price").innerHTML = message + "€";
   document.getElementById("passenger-name").innerHTML = userName;
   document.getElementById("codeCP").innerHTML = codeCPrandom;
-
+  document.getElementById("wagon-nbr").innerHTML = wagonNumber;
 
 });
 
