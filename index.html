@@ -12,33 +12,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <section class="module">
-        <label for="name">Nome e Cognome</label>
-        <input type="text" id="name">
+<body class=" d-flex flex-center w-100 vh-100 bgimage">
+    <div class="container-fluid w-75 h-75">
+        <h2 class="main-title fw-bold fs-1 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="upper w-10 pt-3 pb-2 d-flex flex-center flex-wrap rounded-2">
+            <section class="module w-100 d-flex flex-center">
 
-        <label for="distance">Km da percorrere</label>
-        <input type="text" id="distance">
-
-        <label for="ageRange">Fascia d'età</label>
-        <select id="ageRange">
-            <option value=""></option>
-            <option value="minor">Minorenne</option>
-            <option value="adult">Maggiorenne</option>
-            <option value="elder">Over 65</option>
-        </select>
-
-        <div class="button">
-            <button id="send">Invia</button>
-            <button id="delete">Cancella</button>
+                <div class="name-section d-flex flex-column w-50 px-5">
+                    <label class="mb-2 text-center" for="name">Nome e Cognome</label>
+                    <input type="text" id="name" class="rounded-3 px-2 py-1">
+                </div>
+                
+                <div class="distance-section d-flex flex-column w-25 px-4">
+                    <label class="mb-2 text-center" for="distance">Km da percorrere</label>
+                    <input type="text" id="distance" class="rounded-3 px-2 py-1">
+                </div>
+                
+                <div class="ageRange-section d-flex flex-column w-25 px-4">
+                    <label class="mb-2 text-center" for="ageRange">Fascia d'età</label>
+                    <select id="ageRange" class="rounded-3 py-1">
+                        <option value="" class="rounded-2"></option>
+                        <option value="minor">Minorenne</option>
+                        <option value="adult">Maggiorenne</option>
+                        <option value="elder">Over 65</option>
+                    </select>
+                </div>
+                
+            </section>    
+            
+            <div class="button mt-5 mb-3">
+                <button id="send" class="btn">Invia</button>
+                <button id="delete" class="btn">Cancella</button>
+            </div>
         </div>
-
-    </section>
-
-    <section id="ticket" class="hidden">
-        <h2>Il prezzo del tuo biglietto è:</h2>
-        <p id="price"></p>
-    </section>
+    
+        <div class="bottom w-10 h-50 d-flex flex-center">
+            <section id="ticket" class="hidden">
+                <h2>Il prezzo del tuo biglietto è:</h2>
+                <p id="price"></p>
+            </section>
+    
+        </div>
+    </div>
 
 
     <script src="js/script.js"></script>

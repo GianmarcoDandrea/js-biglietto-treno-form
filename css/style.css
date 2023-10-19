@@ -1,3 +1,61 @@
+/**************** ROOT ************/
+:root {
+    --primary-color:#b91450;
+}
+
+
+/************** UTILITIES *************/
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/******** BACKGROUND ********/
+.bgimage {
+    background-image: url(../img/base-background.jpg);
+    background-size: cover;
+}
+
+/********** UPPER **********/
+.upper {
+    background-color: #ffffffb4;
+}
+
+label {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.main-title {
+    color: var(--primary-color);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type=text] {
+    border: 1px solid var(--primary-color);
+    line-height: 0;
+}
+
+input[type=text]:focus-visible {
+    outline: none;
+}
+
+#ageRange {
+    border: 1px solid var(--primary-color);
+}
+
+/************** BOTTOM ***********/
+
 .hidden {
     display: none;
 }
