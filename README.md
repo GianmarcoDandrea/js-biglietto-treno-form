@@ -30,6 +30,7 @@ Il codive va all'interno dell'event listener:
 **Output**
 1. Trovare l'elemento in HTML dove stampare il risultato.
 2. Inserire nome, prezzo  e numero biglietto nella pagina html.
+3. Mostrare la sezione del biglietto.
 
 
 **Per cancellare**
