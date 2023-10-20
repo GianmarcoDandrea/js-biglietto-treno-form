@@ -45,12 +45,14 @@ label {
     color: white;
 }
 
-input[type=text] {
+input[type=text],
+input[type=number] {
     border: 1px solid var(--primary-color);
     line-height: 0;
 }
 
-input[type=text]:focus-visible {
+input[type=text]:focus-visible,
+input[type=number]:focus-visible {
     outline: none;
 }
 
